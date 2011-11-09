@@ -12,7 +12,7 @@ BEGIN {
 	$Module::Install::TrustMetaYml::VERSION   = '0.001';
 }
 
-use base qw(Module::Install::Base);
+use parent qw(Module::Install::Base);
 
 sub trust_meta_yml
 {
