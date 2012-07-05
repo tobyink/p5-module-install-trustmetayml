@@ -41,7 +41,7 @@ sub trust_meta_yml
 
 *trust_meta_yaml = \&trust_meta_yml;
 
-TRUE;
+1;
 
 __END__
 
