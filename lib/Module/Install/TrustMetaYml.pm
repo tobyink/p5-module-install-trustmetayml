@@ -1,25 +1,21 @@
 package Module::Install::TrustMetaYml;
 
-use 5.008;
-use constant { FALSE => 0, TRUE => 1 };
+use 5.005;
 use strict;
-use utf8;
 
 BEGIN {
 	$Module::Install::TrustMetaYml::AUTHORITY = 'cpan:TOBYINK';
-}
-BEGIN {
 	$Module::Install::TrustMetaYml::VERSION   = '0.001';
 }
 
-use parent qw(Module::Install::Base);
+use base qw(Module::Install::Base);
 
 sub trust_meta_yml
 {
 	my ($self, $where) = @_;
 	$where ||= 'META.yml';
 
-	$self->perl_version('5.006') unless defined $self->perl_version;
+	$self->perl_version('5.005') unless defined $self->perl_version;
 	
 	$self->include_deps('YAML::Tiny', 0);
 	return $self if $self->is_admin;
@@ -27,7 +23,7 @@ sub trust_meta_yml
 	require YAML::Tiny;
 	my $data = YAML::Tiny::LoadFile($where);
 
-	$self->perl_version($data->{requires}{perl} || '5.006');
+	$self->perl_version($data->{requires}{perl} || '5.005');
 	
 	KEY: foreach my $key (qw(requires recommends build_requires))
 	{
@@ -48,6 +44,8 @@ sub trust_meta_yml
 TRUE;
 
 __END__
+
+=encoding utf8
 
 =head1 NAME
 
@@ -102,7 +100,7 @@ weren't working.
 
 =head1 COPYRIGHT AND LICENCE
 
-This software is copyright (c) 2011 by Toby Inkster.
+This software is copyright (c) 2011-2012 by Toby Inkster.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
