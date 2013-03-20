@@ -5,7 +5,7 @@ use strict;
 
 BEGIN {
 	$Module::Install::TrustMetaYml::AUTHORITY = 'cpan:TOBYINK';
-	$Module::Install::TrustMetaYml::VERSION   = '0.002';
+	$Module::Install::TrustMetaYml::VERSION   = '0.003';
 }
 
 use base qw(Module::Install::Base);

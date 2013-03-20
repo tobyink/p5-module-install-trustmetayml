@@ -10,3 +10,9 @@
 		item "Reduce list of dependencies."^^Change;
 		item "Support Perls prior to 5.8."^^Change;
 	].
+
+`Module-Install-TrustMetaYml 0.003 cpan:TOBYINK`
+	issued       2013-03-20;
+	changeset [
+		item "No need to bundle Scalar::Util in 'inc' directory."^^Change;
+	].
