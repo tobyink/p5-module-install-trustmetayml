@@ -17,7 +17,7 @@ sub trust_meta_yml
 
 	$self->perl_version('5.005') unless defined $self->perl_version;
 	
-	$self->include_deps('YAML::Tiny', 0);
+	$self->include('YAML::Tiny', 0);
 	return $self if $self->is_admin;
 
 	require YAML::Tiny;
