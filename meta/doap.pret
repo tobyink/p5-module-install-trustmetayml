@@ -16,3 +16,13 @@
 <http://dev.perl.org/licenses/>
 	dc:title        "the same terms as the perl 5 programming language system itself".
 
+cpan:TOBYINK foaf:name "Toby Inkster".
+
+# Thanks to Chris Williams (BINGOS), Ingy döt Net (INGY) and Florian Ragwitz (FLORA)
+# for explaining the role of C<MYMETA.json>, and helping me figure out why mine
+# weren't working.
+
+`Module-Install-TrustMetaYml` :helper cpan:BINGOS, cpan:INGY, cpan:FLORA.
+cpan:BINGOS foaf:name "Chris Williams".
+cpan:INGY   foaf:name "Ingy döt Net".
+cpan:FLORA  foaf:name "Florian Ragwitz".
