@@ -4,5 +4,5 @@
 	perl_version_from  m`Module::Install::TrustMetaYml`;
 	version_from       m`Module::Install::TrustMetaYml`;
 	readme_from        m`Module::Install::TrustMetaYml`;
-	requires           m`YAML::Tiny`.
+	requires           p`YAML::Tiny`.
 
